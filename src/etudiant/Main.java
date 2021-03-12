@@ -30,7 +30,6 @@ public class Main {
 		Ronan.retirerChien(1);
 		
 		Ronan.ajouterAnimal(Dracaufeu);
-		Vinz.ajouterAnimal(Pichu);
 		
 		Ronan.sePresenter();
 		
