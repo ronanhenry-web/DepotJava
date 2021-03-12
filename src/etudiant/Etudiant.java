@@ -25,6 +25,8 @@ public class Etudiant {
 		System.out.println("Bonjour, je me présente je m'appelle " + nom + " " + prenom + " et j'ai " + age + " ans. Actuellement je suis en " + classe + ".");
 		for(int i = 0; i < chiens.size(); i++) {//size = length
 			chiens.get(i).sePresenter();
+		}
+		for(int i = 0; i < animaux.size(); i++) {//size = length
 			animaux.get(i).sePresenter();
 		}
 	}
