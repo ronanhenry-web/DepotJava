@@ -1,26 +1,52 @@
 package etudiant;
 
 public class Animal {
-	private String nom;
-	private int taille;
-	private String couleur;
-	private int force;
-	private String type;
+	protected String nom;
+	protected String prenom;
+	protected int taille;
+	protected int age;
+	protected String espece;
 	
+	public Animal(String nom, String prenom, int taille, int age, String espece) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.taille = taille;
+		this.age = age;
+		this.espece = espece;
+	}
 	
-	public Animal(String p_nom, int p_taille, String p_couleur, int p_force, String p_type) {
-		nom = p_nom;
-		taille = p_taille;
-		couleur = p_couleur;
-		force = p_force;
-		type = p_type;
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public int getTaille() {
+		return taille;
+	}
+	public void setTaille(int taille) {
+		this.taille = taille;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getEspece() {
+		return espece;
+	}
+	public void setEspece(String espece) {
+		this.espece = espece;
 	}
 	
 	public void sePresenter() {
-		System.out.println("Mon animal s'appelle " + nom + " , il fait " + taille + " centimètre. Il a plusieurs couleur mais il est surtout : " + couleur + " , sa force va jusqu'à  " + force + " damage sur 300. Pour finir son type est " + type + ".");
-	}
-	
-	public void actionVoler() {
-		System.out.println(nom + " vole de manière élégant");
+		System.out.println("Je suis un animal");
 	}
 }

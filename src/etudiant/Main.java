@@ -6,10 +6,6 @@ import java.util.List;
 public class Main {
 	public static void main(String[] args) {
 		
-		//Mettre chien avant Etudiant car sinon Vinssou ne sera pas dÃ©clarÃ©
-		Chien Vinssou = new Chien(100, 55, "Vinssou", "Bulldog");//0
-		Chien Huugo = new Chien(125, 43, "huugo", "Golden retriever");//1
-		
 		Etudiant Ronan = new Etudiant("HENRY", "Ronan", 19, "BTS SIO");
 		Etudiant Vinz = new Etudiant("LIERMANN", "Vincent", 18, "FAC");
 		Etudiant Aissam = new Etudiant("BERKANI", "Aissam", 19, "BTS SIO");
@@ -18,37 +14,41 @@ public class Main {
 		Classe BTS = new Classe("BTS SIO :");
 		Classe FAC = new Classe("FAC :");
 		
-		Animal Pichu = new Animal("Pichu", 123, "jaune", 180, "electrique");
-		Animal Dracaufeu = new Animal("Dracaufeu", 321, "orange", 210, "feu");
+		PersoAnimal Pichu = new PersoAnimal("Pichu", 123, "jaune", "pokémon");
+		PersoAnimal Dracaufeu = new PersoAnimal("Dracaufeu", 321, "orange", "pokémon");
 		
-		List<Chien>chenil = new ArrayList<Chien>();
-		chenil.add(Vinssou);
-		chenil.add(Huugo);
+		Animal Saucisse = new Chien("Belle", "Saucisse", 30, 12, "Chien", "Marron", "Teckel");
+		Animal KingKong = new Gorille("King", "Kong", 260, 26, "Gorille", "Gris");
+		Animal PeppaPig = new Cochon("Peppa", "Pig", 80, 6, "Cochon", "Rose");
 		
-		Ronan.ajouterChien(Vinssou);
-		Ronan.ajouterChien(Huugo);
-		Ronan.retirerChien(1);
-		
-		Ronan.ajouterAnimal(Dracaufeu);
+		//Animaux
+		Ronan.addAnimaux(Saucisse);
+		Ronan.addAnimaux(KingKong);
+		Ronan.addAnimaux(PeppaPig);
 		
 		Ronan.sePresenter();
 		
-		Dracaufeu.actionVoler();
+		//List<Chien>chenil = new ArrayList<Chien>();
+		//chenil.add(Vinssou);
+		//chenil.add(Huugo);
 		
-		for (int i = 0; i < chenil.size(); i++) {
+		/*for (int i = 0; i < chenil.size(); i++) {
 			//System.out.println(chenil.get(i));//Presente la race des chiens
-		}
+		}*/
 		
-		BTS.addEtudiant(Aissam);
-		FAC.addEtudiant(Vinz);
-		FAC.addEtudiant(Hugo);
-		FAC.removeEtudiant(1);
+		//Etudiants
+		//Ronan.sePresenter();
+		//Vinz.sePresenter();
+		//Aissam.sePresenter();
+		//Hugo.sePresenter();
+		
+		//Classes
+		//BTS.addEtudiant(Aissam);
+		//FAC.addEtudiant(Vinz);
+		//FAC.addEtudiant(Hugo);
+		//FAC.removeEtudiant(1);
 		
 		//BTS.presenterClasse();
 		//FAC.presenterClasse();
-		
-		FAC.getEtudiant(1);
-		
-		
 	}
 }
