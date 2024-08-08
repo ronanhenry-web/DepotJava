@@ -1,4 +1,4 @@
-# Projet DepotJava
+# Projet Depot Java
 
 Dépôt avec plein d'exercices
 
